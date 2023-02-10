@@ -12,6 +12,7 @@
 @mixin text-heading-1 {
     @include text-heading-styles;
     line-height: 132.142%;
+    letter-spacing: 0.02em;
 
     @include viewport-desktop {
         font-size: px-to-rem(44);
@@ -34,16 +35,15 @@
 
 @mixin text-heading-2 {
     @include text-heading-styles;
-    letter-spacing: 0.02em;
 
     @include viewport-desktop {
         font-size: px-to-rem(42);
     }
     @include viewport-tablet {
-        font-size: px-to-rem(42);
+        font-size: px-to-rem(32);
     }
     @include viewport-phone {
-        font-size: px-to-rem(30);
+        font-size: px-to-rem(24);
 
     }
 }
