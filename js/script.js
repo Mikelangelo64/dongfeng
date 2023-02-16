@@ -41,6 +41,15 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('html').classList.add('v-desk');
   }
 
+  //wow
+  const wowAnimation = new WOW({
+    // boxClass: 'animate-up',
+    // animateClass: 'show',
+    //offset: 100,
+  });
+
+  wowAnimation.init();
+
   //normal vh
   const vh = window.innerHeight * 0.01;
   document.body.style.setProperty('--vh', `${vh}px`);
@@ -73,11 +82,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const timelinePopup = gsap.timeline({
-      defaults: { duration: 0.3, ease: 'power4.inOut' },
+      defaults: { duration: 0.6, ease: 'power4.inOut' },
     });
     timelinePopup
-      .to(item, { display: 'block', duration: 0.01 })
-      .from(item, { opacity: 0 })
+      .set(popupInner, { x: '-150%' })
+      .set(item, { display: 'none' })
+      .to(item, { display: 'flex', duration: 0.01 })
+      // .from(popupInner, { x: -100 })
+      // .from(item, { opacity: 0 })
       .to(item, { opacity: 1 })
       .to(popupInner, { x: 0 });
 
@@ -100,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const openPopup = (evt) => {
     const popupClass = evt.target.dataset.popup;
-    const popup = document.querySelector(`.${popupClass}`);
+    const popup = document.querySelector(`[data-popupname=${popupClass}]`);
 
     popupAnimations[popupClass].play();
 
@@ -113,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Array.from(popupOpenBtns).forEach((item) => {
       item.addEventListener('click', (evt) => {
         evt.preventDefault();
+        // console.log(popupAnimations);
         openPopup(evt);
       });
     });
@@ -137,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
       item.addEventListener('click', function (evt) {
         evt.preventDefault();
         evt.stopPropagation();
-        const popup = this.parentElement.parentElement.parentElement;
+        const popup = this.parentElement;
         closePopup(popup);
       });
     });
@@ -146,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (popupArr) {
     Array.from(popupArr).forEach((item) => {
       item.addEventListener('click', function (evt) {
-        if (evt.target === this) {
-          closePopup(this);
-        }
+        //if (evt.target === this) {
+        closePopup(this);
+        //}
       });
     });
 
@@ -161,6 +174,102 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  //mouse label on scroll event
+
+  const mouseLabel = document.querySelector('.banner-more');
+  let progress = {
+    current: 0,
+    target: 0,
+  };
+
+  function lerp(current, target, ease, approximationLeft = 0.001) {
+    const val = current * (1 - ease) + target * ease;
+    const diff = Math.abs(target - val);
+    if (diff <= approximationLeft) {
+      return target;
+    }
+    return val;
+  }
+
+  let idAnimation = null;
+
+  function stopAnimation(idAnimation) {
+    cancelAnimationFrame(idAnimation);
+  }
+
+  const mouseScroll = (y, mouse) => {
+    if (!mouse || y <= 0.2) {
+      return;
+    }
+    if (isMobile.any()) {
+      mouse.style.transform = '';
+      return;
+    }
+    progress.target = y - 0.2;
+    progress.current = lerp(progress.current, progress.target, 0.15, 0.001);
+    mouse.style.transform = `translateY(${progress.current * 100}%)`;
+
+    if (progress.current === progress.target) {
+      stopAnimation(idAnimation);
+      //}
+    } else {
+      mouseScroll(progress.target, mouse);
+    }
+  };
+
+  addEventListener('scroll', (evt) => {
+    if (isMobile.any() || !mouseLabel) {
+      return;
+    }
+
+    const section = mouseLabel.parentElement.parentElement.parentElement;
+
+    const sectionRect = section.getBoundingClientRect();
+    const sectionHeight = sectionRect.height;
+
+    const y = Math.min(Math.max(-sectionRect.top / sectionHeight, 0), 1);
+    //console.log(y);
+
+    idAnimation = window.requestAnimationFrame(() => {
+      mouseScroll(y, mouseLabel);
+    });
+  });
+
+  //additional image parallax
+  // const additionals = document.querySelectorAll('.img-additional__wrapper');
+  // const additionalProgressArr = [];
+  // additionals.length !== 0 &&
+  //   additionals.forEach((additional) => {
+  //     const progress = {
+  //       current: 0,
+  //       target: 0,
+  //     };
+  //     additionalProgressArr.push(progress);
+  //   });
+
+  // const additionalListenerHandler = (additional) => {
+  //   if (isMobile.any() || !additional) {
+  //     return;
+  //   }
+
+  //   //const parent = additional.parentElement.parentElement.parentElement;
+
+  //   const additionalRect = parent.getBoundingClientRect();
+  //   const additionalHeight = sectionRect.height;
+
+  //   const y = Math.min(
+  //     Math.max(-additionalRect.top / window.innerHeight, 0),
+  //     1
+  //   );
+  //   //console.log(y);
+
+  //   idAnimation = window.requestAnimationFrame(() => {
+  //     mouseScroll(y, mouseLabel);
+  //   });
+  // };
+
+  // const additionalParalaxHandler = (y, additional) => {};
 
   //swipers
   const swiperGallery = new Swiper('.gallery-slider.swiper', {

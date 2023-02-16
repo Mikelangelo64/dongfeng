@@ -10,10 +10,12 @@
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/animate.css" />
   <link rel="stylesheet" href="css/styles.css" />
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 
@@ -22,13 +24,13 @@
     <div class="_container">
       <div class="header__wrapper">
 
-        <div class="header__item">
+        <div class="header__item wow fadeInLeftSmall" data-wow-delay="0.3s">
           <a href="#" class="custom-logo-link header__logo">
             <img src="./assets/img/label-logo.svg" alt="logo">
           </a>
         </div>
 
-        <div class="header__item">
+        <div class="header__item wow fadeInLeftSmall" data-wow-delay="0.6s">
           <div class="header__title">
             <p>
               Нові автомобілі в наявності та під замовлення
@@ -36,7 +38,7 @@
           </div>
         </div>
 
-        <div class="header__item">
+        <div class="header__item wow fadeInLeftSmall" data-wow-delay="0.9s">
           <div class="header__buttons">
             <div class="header-phone">
               <a href="tel:+3800440000" class="header-phone__link">
@@ -176,17 +178,17 @@
       <div class="banner__wrapper">
         <div class="banner__main">
           <div class="banner__text">
-            <div class="banner__title__container">
+            <div class="banner__title__container wow fadeInLeft" data-wow-delay="0.6s">
               <h1 class="banner__title">
                 Комфортний, надійний та безпечний середньорозмірний пікап
               </h1>
             </div>
-            <div class="banner__description">
+            <div class="banner__description wow fadeInLeft" data-wow-delay="0.9s">
               <p>
                 для бізнесу й активного відпочинку
               </p>
             </div>
-            <div class="banner__button__container">
+            <div class="banner__button__container wow fadeInLeft" data-wow-delay="1.2s">
               <button class="banner__button _btn">
                 Дізнатися ціну
               </button>
@@ -206,12 +208,23 @@
             </div>
 
             <div class="banner-car__img">
-              <img src="./assets/img/img-banner-car.png" alt="car">
+              <img class="wow fadeInUpSmall" data-wow-delay="0.3s" src="./assets/img/img-banner-car.png" alt="car">
+
+              <div class="img-additional wow fadeInRightSmall" data-wow-delay="0.6s">
+                <div class="img-additional__wrapper">
+                  <div class="img-additional__label">
+                    <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                  </div>
+                  <div class="img-additional__label">
+                    <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="banner-more">
+        <div class="banner-more wow fadeInDown" data-wow-delay="1.5s">
           <div class="banner-more__label" aria-hidden="true">
             <div class="banner-more__mouse">
               <img src="./assets/img/label-mouse.svg" alt="mouse">
@@ -237,7 +250,7 @@
     <div class="general__container _container">
       <div class="general__wrapper">
 
-        <div class="_section-header general__header">
+        <div class="_section-header general__header wow fadeInUp">
           <div class="_section-header__title__container general__title__container">
             <h2 class="_section-header__title general__title">
               Китайський пікап з японським серцем
@@ -254,7 +267,19 @@
 
           <div class="general-car">
             <div class="general-car__img">
-              <img src="./assets/img/img-general-car.png" alt="pickup">
+              <img class="wow fadeInLeftSmall" data-wow-delay="0.15s" src="./assets/img/img-general-car.png"
+                alt="pickup">
+
+              <div class="img-additional wow fadeInRightSmall" data-wow-delay="0.15s">
+                <div class="img-additional__wrapper">
+                  <div class="img-additional__label">
+                    <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                  </div>
+                  <div class="img-additional__label">
+                    <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -365,7 +390,7 @@
     <div class="_container features__container">
       <div class="features__wrapper">
 
-        <div class="_section-header features__header">
+        <div class="_section-header features__header wow fadeInLeft" data-wow-delay="0.15s">
           <div class="_section-header__title__container features__title__container">
             <h2 class="_section-header__title features__title">
               Чому вигідно купувати саме dongfeng rich 6
@@ -379,35 +404,35 @@
         </div>
 
         <div class="features-main">
-          <div class="features-main__img">
+          <div class="features-main__img wow fadeInRightSmall" data-wow-delay="0.15s">
             <img src="./assets/img/img-features-main.png" alt="features">
           </div>
-          <div class="features-main__list">
-            <button class="features-main__action">
+          <div class="features-main__list wow fadeInRightSmall" data-wow-delay="0.15s">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
-            <button class="features-main__action">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
-            <button class="features-main__action">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
-            <button class="features-main__action">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
-            <button class="features-main__action">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
-            <button class="features-main__action">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
-            <button class="features-main__action">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
-            <button class="features-main__action">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
-            <button class="features-main__action">
+            <button data-popup="_popup-pickup-1" class="features-main__action popup-open">
               <span class="features-main__label"></span>
             </button>
           </div>
@@ -418,41 +443,41 @@
 
   <section class="cabin">
 
-    <div class="cabin-picture">
+    <div class="cabin-picture wow fadeIn">
       <div class="cabin-picture__wrapper">
         <div class="cabin-picture__img">
           <img src="./assets/img/img-cabin.png" alt="cabin">
         </div>
 
         <div class="cabin-picture__list">
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
-          <button class="cabin-picture__action">
+          <button data-popup="_popup-pickup-1" class="cabin-picture__action popup-open">
             <span class="cabin-picture__label"></span>
           </button>
         </div>
@@ -461,7 +486,7 @@
 
     <div class="_container cabin__container">
 
-      <div class="cabin__title__container">
+      <div class="cabin__title__container wow fadeInLeft">
         <h2 class="cabin__title">
           Також у “базі” є все те, що просто повинно бути у сучасному пікапі
         </h2>
@@ -476,7 +501,7 @@
         </div>
       </div>
 
-      <div class="cabin-more">
+      <div class="cabin-more wow fadeInLeftSmall" data-wow-delay="0.15s">
         <div class="cabin-more__text">
           <p>
             а ще він...
@@ -506,7 +531,18 @@
           </div>
 
           <div class="details-picture__img">
-            <img src="./assets/img/img-details-1.png" alt="details-1">
+            <img class="wow fadeInUpSmall" src="./assets/img/img-details-1.png" alt="details-1">
+
+            <div class="img-additional wow fadeInLeftSmall">
+              <div class="img-additional__wrapper">
+                <div class="img-additional__label">
+                  <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                </div>
+                <div class="img-additional__label">
+                  <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -598,7 +634,7 @@
       <div class="details__wrapper">
 
         <div class="details-picture">
-          <div class="details-picture__list">
+          <div class="details-picture__list wow fadeIn" data-wow-delay="0.15s">
             <button class="details-picture__action">
               <span class="details-picture__popup">
                 <span class="details-picture__popup__label" aria-hidden="true">
@@ -637,7 +673,18 @@
           </div>
 
           <div class="details-picture__img">
-            <img src="./assets/img/img-details-2.png" alt="details-2">
+            <img class="wow fadeInUpSmall" src="./assets/img/img-details-2.png" alt="details-2">
+
+            <div class="img-additional wow fadeInRightSmall">
+              <div class="img-additional__wrapper">
+                <div class="img-additional__label">
+                  <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                </div>
+                <div class="img-additional__label">
+                  <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -711,7 +758,18 @@
 
         <div class="details-picture">
           <div class="details-picture__img">
-            <img src="./assets/img/img-details-3.png" alt="details-3">
+            <img class="wow fadeInUpSmall" src="./assets/img/img-details-3.png" alt="details-3">
+
+            <div class="img-additional wow fadeInLeftSmall">
+              <div class="img-additional__wrapper">
+                <div class="img-additional__label">
+                  <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                </div>
+                <div class="img-additional__label">
+                  <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -786,7 +844,18 @@
 
         <div class="details-picture">
           <div class="details-picture__img">
-            <img src="./assets/img/img-details-4.png" alt="details-4">
+            <img class="wow fadeInUpSmall" src="./assets/img/img-details-4.png" alt="details-4">
+
+            <div class="img-additional wow fadeInRightSmall">
+              <div class="img-additional__wrapper">
+                <div class="img-additional__label">
+                  <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                </div>
+                <div class="img-additional__label">
+                  <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -857,7 +926,7 @@
     <div class="_container automatic__container">
       <div class="automatic__wrapper">
 
-        <div class="_section-header automatic__header">
+        <div class="_section-header automatic__header wow fadeInUp">
           <div class="_section-header__title__container automatic__title__container">
             <h2 class="_section-header__title automatic__title">
               А якщо ще купити з “автоматом”...
@@ -972,7 +1041,7 @@
     <div class="_container gallery__container">
       <div class="gallery__wrapper">
 
-        <div class="_section-header gallery__header">
+        <div class="_section-header gallery__header wow fadeInUp">
           <div class="_section-header__title__container gallery__title__container">
             <h2 class="_section-header__title gallery__title">
               Дивіться галерею dongfeng rich6
@@ -1084,7 +1153,18 @@
     <div class="_container buying__container">
 
       <div class="buying__img">
-        <img src="./assets/img/img-buying.png" alt="car" aria-hidden="true">
+        <img class="wow fadeInRightSmall" src="./assets/img/img-buying.png" alt="car" aria-hidden="true">
+
+        <div class="img-additional wow fadeInLeftSmall" data-wow-delay="0.15s">
+          <div class="img-additional__wrapper">
+            <div class="img-additional__label">
+              <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+            </div>
+            <div class="img-additional__label">
+              <img src="./assets/img/label-img-additional.svg" alt="additional" aria-hidden="true">
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="buying__wrapper">
@@ -1157,7 +1237,7 @@
 
         <div class="footer-main">
 
-          <div class="footer-main__column">
+          <div class="footer-main__column wow fadeInUp" data-wow-delay="0.45s">
             <a href="https://goo.gl/maps/QHwGkn76QU49V6t26" class="footer__link">
               <strong>
                 м. Київ,<span></span> вул. Ушинського 33
@@ -1169,7 +1249,7 @@
             </a>
           </div>
 
-          <div class="footer-main__column">
+          <div class="footer-main__column wow fadeInUp" data-wow-delay="0.15s">
             <a href="#" class="custom-logo-link footer__logo">
               <img src="./assets/img/label-logo.svg" alt="logo">
             </a>
@@ -1182,7 +1262,7 @@
           </div>
 
 
-          <div class="footer-main__column">
+          <div class="footer-main__column wow fadeInUp" data-wow-delay="0.45s">
             <a href="#" class="footer__link">
               <strong>
                 +38 800 444 00 00
@@ -1203,7 +1283,7 @@
           </div>
         </div>
 
-        <div class="footer__copyrights">
+        <div class="footer__copyrights wow fadeInUp" data-wow-delay="1s">
           <p>
             © Всі права захищені. 2022
           </p>
@@ -1211,6 +1291,29 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup _popup-pickup" data-popupname="_popup-pickup-1" aria-modal="true" role="dialog">
+    <button class="popup__close">
+      <img src="./assets/img/label-close.svg" alt="close">
+    </button>
+    <div class="popup__scroll">
+      <div class="popup__wrapper">
+        <div class="popup__content">
+          <div class="popup__title__container">
+            <h2 class="popup__title">
+              Легкосплавні диски
+            </h2>
+          </div>
+
+          <div class="popup__img">
+            <div class="popup__img__container">
+              <img src="./assets/img/img-popup-1.png" alt="popup">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
