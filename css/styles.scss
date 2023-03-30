@@ -4014,6 +4014,7 @@ section {
 
 .main {
     font-family: $font-family-baggy-main;
+    margin-bottom: px-to-rem(75);
 
     // .main__wrapper
     &__wrapper {
@@ -4379,7 +4380,133 @@ section {
     }
 }
 
-.stickysub {}
+.stickysub {
+    padding: 10px 0;
+
+    box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: var(--color-white);
+    z-index: 10;
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        &+.about {
+            padding-top: px-to-rem(150);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 15%;
+        min-width: px-to-rem(135);
+        margin-right: px-to-rem(20);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__menu {
+        width: 80%;
+
+        @include viewport-tablet-min {
+            display: block;
+        }
+
+        @include viewport-phone {
+            @media (max-width: 540px) {
+                display: none;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+
+            >li+li {
+                margin-left: px-to-rem(20);
+            }
+
+            a {
+                font-family: $font-family-baggy-main;
+                font-size: px-to-rem(18);
+                color: var(--color-black);
+                text-decoration: none;
+                text-transform: uppercase;
+                line-height: 1;
+                letter-spacing: .025em;
+                transition: 0.3s ease;
+
+                &:hover {
+                    color: var(--color-highlight);
+                }
+            }
+        }
+    }
+
+
+    &-mob {
+        display: none;
+        position: relative;
+
+        @include viewport-phone {
+            @media (max-width: 540px) {
+                display: block;
+            }
+        }
+
+        &__label {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: $font-family-baggy-main;
+
+            svg {
+                width: 30px;
+            }
+
+        }
+
+        &__menu {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            right: 0;
+            background-color: var(--color-black-100);
+            transition: 0.3s ease;
+
+            &._active {
+                opacity: 0.9;
+            }
+
+            li {
+                font-family: $font-family-baggy-main;
+                padding: px-to-rem(10) px-to-rem(35);
+                border-bottom: 1px solid var(--color-white);
+                text-transform: uppercase;
+            }
+
+            a {
+                color: var(--color-white);
+            }
+
+        }
+    }
+}
 
 .features {
 
@@ -4430,7 +4557,7 @@ section {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    
+
                     @include viewport-phone {
                         position: relative;
                     }
@@ -4535,7 +4662,7 @@ section {
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;        
+            object-fit: cover;
         }
     }
 
@@ -4592,11 +4719,13 @@ section {
         width: 100%;
 
         @include viewport-tablet-min {
-            padding-top: 42.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            padding-top: 42.25%;
+            /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
         }
 
         @include viewport-phone {
-            padding-top: 62.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            padding-top: 62.25%;
+            /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
         }
 
         iframe {
@@ -4607,7 +4736,7 @@ section {
             right: 0;
             width: 100%;
             height: 100%;
-          }
+        }
     }
 }
 
@@ -4704,7 +4833,7 @@ section {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,.68);
+        background-color: rgba(0, 0, 0, .68);
         transition: 0.3s ease;
         opacity: 0;
         z-index: 2;

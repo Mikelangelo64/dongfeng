@@ -339,6 +339,32 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   // END about accordion
 
+  // Sticky Sub Header
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () { myFunction() };
+
+  // Get the header
+  var subHeader = document.getElementById("sub-header");
+
+  // Get the offset position of the navbar
+  var sticky = subHeader.offsetTop;
+
+  // Add the sticky class to the subHeader when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      subHeader.classList.add("sticky");
+    } else {
+      subHeader.classList.remove("sticky");
+    }
+  }
+  // END Sticky Sub Header
+
+  var mobMenuBtn = document.querySelectorAll('.stickysub-mob__label');
+  var mobMobMenu = document.querySelectorAll('.stickysub-mob__menu');
+  mobMenuBtn[0].addEventListener("click", function () {
+    mobMobMenu[0].classList.toggle("_active");
+  });
+
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
   });
