@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Gabriela&family=Montserrat+Alternates:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
 
+@font-face {
+    font-family: "DINNextW01-CondensedRegular";
+    src: url("/assets/fonts/DINNextLTPro-Condensed.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "UnitedSansReg-Bold";
+    src: url("/assets/fonts/UnitedSansReg-Bold.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "UnitedSansReg-Heavy";
+    src: url("/assets/fonts/UnitedSansReg-Heavy.otf");
+    font-display: swap;
+}
+
 /* font-family: 'Allerta Stencil', sans-serif;
 font-family: 'Gabriela', serif;
 font-family: 'Montserrat Alternates', sans-serif;

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dongfeng</title>
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="_container">
+      <div class="header__wrapper">
+
+        <div class="header__item wow fadeInLeftSmall" data-wow-delay="0.3s">
+          <a href="#" class="custom-logo-link header__logo">
+            <img src="./assets/img/label-logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <div class="header__item wow fadeInLeftSmall" data-wow-delay="0.6s">
+          <div class="header__title">
+            <p>
+              Нові автомобілі в наявності та під замовлення
+            </p>
+          </div>
+        </div>
+
+        <div class="header__item wow fadeInLeftSmall" data-wow-delay="0.9s">
+          <div class="header__buttons">
+            <div class="header-phone">
+              <a href="tel:+3800440000" class="header-phone__link">
+                +38 800 444 00 00
+              </a>
+              <div class="header-phone-socials _desk">
+                <a href="#" class="header-phone-socials__item">
+                  <img src="./assets/img/label-viber.svg" alt="viber">
+                </a>
+                <a href="#" class="header-phone-socials__item">
+                  <img src="./assets/img/label-watsup.svg" alt="watsup">
+                </a>
+                <a href="#" class="header-phone-socials__item">
+                  <img src="./assets/img/label-telegram.svg" alt="telegram">
+                </a>
+              </div>
+            </div>
+
+            <button class="menu-burger popup-open" data-popup="_popup-menu">
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="popup popup-burger _popup-menu" data-popupname="_popup-menu" aria-modal="true" role="dialog">
+          <div class="popup__scroll">
+            <div class="popup__wrapper">
+              <button class="popup__close">
+                <img src="./assets/img/label-close.svg" alt="close">
+              </button>
+              <div class="popup__content">
+
+                <div class="menu menu__mobile">
+                  <div class="header-phone _mobile">
+                    <a href="tel:+3800440000" class="header-phone__link">
+                      +38 800 444 00 00
+                    </a>
+                    <div class="header-phone-socials">
+                      <a href="#" class="header-phone-socials__item">
+                        <img src="./assets/img/label-viber.svg" alt="viber">
+                      </a>
+                      <a href="#" class="header-phone-socials__item">
+                        <img src="./assets/img/label-watsup.svg" alt="watsup">
+                      </a>
+                      <a href="#" class="header-phone-socials__item">
+                        <img src="./assets/img/label-telegram.svg" alt="telegram">
+                      </a>
+                    </div>
+                  </div>
+                  <!-- <ul class="menu__list">
+                    <li>
+                      <a href="#" class="menu__item">
+                        Про університет
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Освіта
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Наука
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Міжнародна діяльність
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Новини
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Події
+                      </a>
+                    </li>
+                    <li class="_marked">
+                      <a href="#" class="menu__item">
+                        Дозвілля
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="menu__item">
+                        Школярам
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Абітурієнтам
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Студентам
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Викладачам
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Науковцям
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu__item">
+                        Партнерам
+                      </a>
+                    </li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <section class="main">
+    <div class="_container">
+      <div class="main__wrapper">
+        <div class="main__col">
+          <div class="main__alt">Actual vehicle may vary from images shown</div>
+          <div class="main__image">
+            <img src="/assets/img/baggy/car-1.png" alt="" class="_active">
+            <img src="/assets/img/baggy/car-2.png" alt="">
+            <img src="/assets/img/baggy/car-3.png" alt="">
+            <img src="/assets/img/baggy/car-4.png" alt="">
+            <img src="/assets/img/baggy/car-5.png" alt="">
+            <img src="/assets/img/baggy/car-6.png" alt="">
+            <img src="/assets/img/baggy/car-7.png" alt="">
+          </div>
+          <div class="main-colors">
+            <div class="main-colors__item _active" data-index="0">
+              <img src="/assets/img/baggy/color-1.png" alt="">
+            </div>
+            <div class="main-colors__item" data-index="1">
+              <img src="/assets/img/baggy/color-2.png" alt="">
+            </div>
+            <div class="main-colors__item" data-index="2">
+              <img src="/assets/img/baggy/color-3.png" alt="">
+            </div>
+            <div class="main-colors__item" data-index="3">
+              <img src="/assets/img/baggy/color-4.png" alt="">
+            </div>
+            <div class="main-colors__item" data-index="4">
+              <img src="/assets/img/baggy/color-5.png" alt="">
+            </div>
+            <div class="main-colors__item" data-index="5">
+              <img src="/assets/img/baggy/color-6.png" alt="">
+            </div>
+            <div class="main-colors__item" data-index="6">
+              <img src="/assets/img/baggy/color-7.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="main__col">
+          <div class="main__suptitle">OFF-ROAD VEHICLE</div>
+          <h1 class="main__title _title">THE BEAST 1000 4S</h1>
+          <div class="main__text">
+            <ul>
+              <li>81 HP, V-twin 996cc EFI Engine</li>
+              <li>EPS System Electric Power Steering</li>
+              <li>Fully Automatic CVT P/R/N/L/H</li>
+              <li>4WD-2WD W/ LOCK-DIFFERENTIAL</li>
+              <li>2-IN-1 Electric Dump/Flat Bed</li>
+              <li>14" Ground Clearance Nitro-Gas Charged Shocks</li>
+              <li>76" Wide Track,Long Travel Suspension w/ Double A-arms</li>
+              <li>Front & Rear Hydraulic Disc-Brakes</li>
+              <li>Front and Rear Custom Fender Flares</li>
+              <li>15” Beadlock Aluminum Rims with Off-road tires</li>
+              <li>Front UTV Rack</li>
+              <li>LED HALO Headlights</li>
+              <li>8X Roof LED Lights</li>
+              <li>Roof Rack</li>
+              <li>Roof Metal Canopy</li>
+              <li>Half-windshield w/ velcro straps</li>
+              <li>Heavy Duty Steel Front Bumper and custom grill</li>
+              <li>Custom Side Doors</li>
+              <li>Front Electric Winch (3,500 lbs. Capacity) Equipped</li>
+              <li>Rear Tow-hitch</li>
+              <li>EPA approved</li>
+            </ul>
+          </div>
+          <div class="main__price">
+            MSRP <span class="price">$18,499</span> <span class="currency">USD</span>
+          </div>
+          <div class="main__notification">
+            <p>*MSRP Does not include destination charges, taxes, licenses fee or Dealer preparation</p>
+          </div>
+
+          <div class="main-optionals">
+            <div class="main-optionals__title">AVAILABLE OPTIONAL PARTS & ACCESSORY</div>
+            <p class="main-optionals__text">
+              Choose from our accessory collections designed for your ®BMS The Beast 1000 4s.
+            </p>
+            <ul class="main-optionals__list">
+              <li>BMS SNOW PLOW 72"</li>
+              <li>Zipper Door Cab Enclosure</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="stickysub">
+    <div class="_container">
+      <div class="stickysub__wrapper">
+        igyhijopoguihj
+      </div>
+    </div>
+  </section> -->
+  <section class="about">
+    <div class="_container">
+      <div class="about__wrapper">
+        <div class="about-accordion">
+          <button class="accordion">ENGINE & DRIVE TRAIN</button>
+          <div class="panel">
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+          </div>
+
+          <button class="accordion">DIMENSIONS & CAPACITIES</button>
+          <div class="panel">
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+          </div>
+
+          <button class="accordion">SUSPENSION & CHASSIS</button>
+          <div class="panel">
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+            <div class="panel__row">
+              <div class="panel__col">Engine Type</div>
+              <div class="panel__col">996cc</div>
+            </div>
+          </div>
+        </div>
+        <div class="about__col">
+          <div class="about-chars">
+            <div class="about-chars__item">
+              <div class="about-chars__number">81</div>
+              <div class="about-chars__text">HORSEPOWER</div>
+            </div>
+            <div class="about-chars__item">
+              <div class="about-chars__number">74"</div>
+              <div class="about-chars__text">VEHICLE WIDTH</div>
+            </div>
+            <div class="about-chars__item">
+              <div class="about-chars__number">14"</div>
+              <div class="about-chars__text">GROUND CLEARANCE</div>
+            </div>
+          </div>
+          <div class="about__image">
+            <img src="/assets/img/baggy/about.png" alt="about">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="features__wrapper">
+      <div class="features__row col-1">
+        <div class="features__col">
+          <img src="/assets/img/baggy/features-1.png" alt="features-1">
+          <div class="features__text">
+            <h2>BMS THE BEAST 1000CC 4-SEAT</h2>
+            <p>The most anticipated model of the year is finally here!. <br />
+              The BMS® Beast 1000cc 4-seat, Equipped with the best standard package in the off-road industry.</p>
+            <ul>
+              <li>996cc V-twin Cylinder 81 Horsepower</li>
+              <li>Electric Power steering</li>
+              <li>4x4 / 4x2 Rear Open Differential with electric lock</li>
+              <li>14" Ground Clearance Long travel suspension double A-arms</li>
+              <li>Automatic CVT Transmission L-H-N-R-P/ High Low Gear</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="features__row col-3">
+        <div class="features__col">
+          <img src="/assets/img/baggy/features-2.jpg" alt="features-2">
+          <div class="features__text">
+            <h3>LED HALO HEADLIGHTS</h3>
+            <p>Stay out on the trail long after dark. Equipped with 4 Inch LED Halo Ring Angel Eyes Off Road Headlights
+            </p>
+          </div>
+        </div>
+
+        <div class="features__col">
+          <img src="/assets/img/baggy/features-3.jpg" alt="features-3">
+          <div class="features__text">
+            <h3>LED HALO HEADLIGHTS</h3>
+            <p>Stay out on the trail long after dark. Equipped with 4 Inch LED Halo Ring Angel Eyes Off Road Headlights
+            </p>
+          </div>
+        </div>
+
+        <div class="features__col">
+          <img src="/assets/img/baggy/features-4.jpg" alt="features-4">
+          <div class="features__text">
+            <h3>LED HALO HEADLIGHTS</h3>
+            <p>Stay out on the trail long after dark. Equipped with 4 Inch LED Halo Ring Angel Eyes Off Road Headlights
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="features__row col-1 reverse">
+        <div class="features__col">
+          <img src="/assets/img/baggy/features-2.png" alt="features-5">
+          <div class="features__text">
+            <h2>BMS THE BEAST 1000CC 4-SEAT</h2>
+            <p>The most anticipated model of the year is finally here!. <br />
+              The BMS® Beast 1000cc 4-seat, Equipped with the best standard package in the off-road industry.</p>
+            <ul>
+              <li>996cc V-twin Cylinder 81 Horsepower</li>
+              <li>Electric Power steering</li>
+              <li>4x4 / 4x2 Rear Open Differential with electric lock</li>
+              <li>14" Ground Clearance Long travel suspension double A-arms</li>
+              <li>Automatic CVT Transmission L-H-N-R-P/ High Low Gear</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="features__row col-2">
+        <div class="features__col">
+          <img src="/assets/img/baggy/features-6.png" alt="features-6">
+          <div class="features__text">
+            <h3>LED HALO HEADLIGHTS</h3>
+            <p>Stay out on the trail long after dark. Equipped with 4 Inch LED Halo Ring Angel Eyes Off Road Headlights
+            </p>
+          </div>
+        </div>
+
+        <div class="features__col">
+          <img src="/assets/img/baggy/features-7.jpg" alt="features-7">
+          <div class="features__text">
+            <h3>LED HALO HEADLIGHTS</h3>
+            <p>Stay out on the trail long after dark. Equipped with 4 Inch LED Halo Ring Angel Eyes Off Road Headlights
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="features__row col-1">
+        <div class="features__col">
+          <img src="/assets/img/baggy/features-8.png" alt="features-8">
+          <div class="features__text">
+            <h2>DRIVER EXPERIENCE</h2>
+            <p>Take your whole family to the off-road adventure with multi-row seats. The BMS® Beast 1000 4s 4x4, offers
+              comfort and generous space for up to four people. It also offers one of the best standard packages in the
+              industry, perfect for outdoor camping or daily work on your ranch or farm.</p>
+            <ul>
+
+              <li>Wireless Bluetooth Speakers</li>
+              <li>Roof utility Rack & hard top</li>
+              <li>2500 LBS Front Winch</li>
+              <li>Double Windshield</li>
+              <li>Fender Flares</li>
+              <li>Roof Lights</li>
+              <li>Over hood Utility Rack</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="features__video">
+        <iframe width="1470" height="727" src="https://www.youtube.com/embed/zbW3GmEyK3w"
+          title="bms the beast 1000cc v twin" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="colors">
+    <div class="colors__wrapper">
+      <h2 class="colors__title">CHOOSE YOUR FAVORITE COLORS</h2>
+
+      <div class="colors-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="colors-slider__item">
+              <div class="colors-slider__image">
+                <img src="/assets/img/baggy/car-1.png" alt="color-car-1">
+              </div>
+              <div class="colors-slider__title">gold-black</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="colors-slider__item">
+              <div class="colors-slider__image">
+                <img src="/assets/img/baggy/car-2.png" alt="color-car-2">
+              </div>
+              <div class="colors-slider__title">gold-black</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="colors-slider__item">
+              <div class="colors-slider__image">
+                <img src="/assets/img/baggy/car-3.png" alt="color-car-3">
+              </div>
+              <div class="colors-slider__title">gold-black</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="colors-slider__item">
+              <div class="colors-slider__image">
+                <img src="/assets/img/baggy/car-4.png" alt="color-car-4">
+              </div>
+              <div class="colors-slider__title">gold-black</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="colors-slider__item">
+              <div class="colors-slider__image">
+                <img src="/assets/img/baggy/car-5.png" alt="color-car-5">
+              </div>
+              <div class="colors-slider__title">gold-black</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="colors-slider__item">
+              <div class="colors-slider__image">
+                <img src="/assets/img/baggy/car-6.png" alt="color-car-6">
+              </div>
+              <div class="colors-slider__title">gold-black</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="colors-slider__item">
+              <div class="colors-slider__image">
+                <img src="/assets/img/baggy/car-7.png" alt="color-car-7">
+              </div>
+              <div class="colors-slider__title">gold-black</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="colors-slider-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="_container">
+      <div class="gallery__wrapper">
+        <a href="/assets/img/baggy/car-1.png" data-fancybox class="gallery__item">
+          <div class="gallery-hover">
+            <div class="gallery-hover__content">
+              <div class="gallery-hover__icon">+</div>
+              <div class="gallery-hover__text">View gallery</div>
+            </div>
+          </div>
+          <img src="/assets/img/baggy/car-1.png" alt="gallery-car-1">
+        </a>
+        <a href="/assets/img/baggy/car-2.png" data-fancybox class="gallery__item">
+          <div class="gallery-hover">
+            <div class="gallery-hover__content">
+              <div class="gallery-hover__icon">+</div>
+              <div class="gallery-hover__text">View gallery</div>
+            </div>
+          </div>
+          <img src="/assets/img/baggy/car-2.png" alt="gallery-car-2">
+        </a>
+        <a href="/assets/img/baggy/car-3.png" data-fancybox class="gallery__item">
+          <div class="gallery-hover">
+            <div class="gallery-hover__content">
+              <div class="gallery-hover__icon">+</div>
+              <div class="gallery-hover__text">View gallery</div>
+            </div>
+          </div>
+          <img src="/assets/img/baggy/car-3.png" alt="gallery-car-3">
+        </a>
+        <a href="/assets/img/baggy/car-4.png" data-fancybox class="gallery__item">
+          <div class="gallery-hover">
+            <div class="gallery-hover__content">
+              <div class="gallery-hover__icon">+</div>
+              <div class="gallery-hover__text">View gallery</div>
+            </div>
+          </div>
+          <img src="/assets/img/baggy/car-4.png" alt="gallery-car-4">
+        </a>
+        <a href="/assets/img/baggy/car-5.png" data-fancybox class="gallery__item">
+          <div class="gallery-hover">
+            <div class="gallery-hover__content">
+              <div class="gallery-hover__icon">+</div>
+              <div class="gallery-hover__text">View gallery</div>
+            </div>
+          </div>
+          <img src="/assets/img/baggy/car-5.png" alt="gallery-car-5">
+        </a>
+        <a href="/assets/img/baggy/car-6.png" data-fancybox class="gallery__item">
+          <div class="gallery-hover">
+            <div class="gallery-hover__content">
+              <div class="gallery-hover__icon">+</div>
+              <div class="gallery-hover__text">View gallery</div>
+            </div>
+          </div>
+          <img src="/assets/img/baggy/car-6.png" alt="gallery-car-6">
+        </a>
+        <a href="/assets/img/baggy/car-7.png" data-fancybox class="gallery__item">
+          <div class="gallery-hover">
+            <div class="gallery-hover__content">
+              <div class="gallery-hover__icon">+</div>
+              <div class="gallery-hover__text">View gallery</div>
+            </div>
+          </div>
+          <img src="/assets/img/baggy/car-7.png" alt="gallery-car-7">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-bg bg-content">
+      <!-- <img class="footer-bg__img bg-content__img" src="./assets/img/background/img-footer-bg.png" alt="banner"
+        aria-hidden="true"> -->
+    </div>
+
+    <div class="_container footer__container">
+      <div class="footer__wrapper">
+
+        <div class="footer-main">
+
+          <div class="footer-main__column wow fadeInUp" data-wow-delay="0.45s">
+            <a href="https://goo.gl/maps/QHwGkn76QU49V6t26" class="footer__link">
+              <strong>
+                м. Київ,<span></span> вул. Ушинського 33
+              </strong>
+            </a>
+
+            <a href="mailto:dongfeng@kiev.ua" class="footer__link">
+              dongfeng@kiev.ua
+            </a>
+          </div>
+
+          <div class="footer-main__column wow fadeInUp" data-wow-delay="0.15s">
+            <a href="#" class="custom-logo-link footer__logo">
+              <img src="./assets/img/label-logo.svg" alt="logo">
+            </a>
+
+            <div class="footer__description">
+              <p>
+                Нові автомобілі в наявності та під замовлення
+              </p>
+            </div>
+          </div>
+
+
+          <div class="footer-main__column wow fadeInUp" data-wow-delay="0.45s">
+            <a href="#" class="footer__link">
+              <strong>
+                +38 800 444 00 00
+              </strong>
+            </a>
+
+            <div class="footer-socials">
+              <a href="#" class="footer-socials__item">
+                <img src="./assets/img/label-viber.svg" alt="viber">
+              </a>
+              <a href="#" class="footer-socials__item">
+                <img src="./assets/img/label-watsup.svg" alt="watsup">
+              </a>
+              <a href="#" class="footer-socials__item">
+                <img src="./assets/img/label-telegram.svg" alt="telegram">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__copyrights wow fadeInUp" data-wow-delay="1s">
+          <p>
+            © Всі права захищені. 2022
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

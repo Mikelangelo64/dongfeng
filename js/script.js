@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.body.style.setProperty('--vh', `${vh}px`);
 
   //change header when scroll
-  const header = document.querySelector('.header');
+  const header = document.querySelector('.header.header-main');
   let isScrollHeader = true;
 
   header &&
@@ -279,5 +279,67 @@ document.addEventListener('DOMContentLoaded', function () {
       el: '.gallery-slider .gallery-slider-pagination',
       clickable: true,
     },
+  });
+
+  const swiperColors = new Swiper('.colors-slider.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '.colors-slider .colors-slider-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      540: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      899: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+
+
+  // ----------------- INNER -------------------- //
+
+  // color switcher
+  const colors = document.querySelectorAll('.main-colors__item');
+  const colorsImages = document.querySelectorAll('.main__image img');
+
+  colors.forEach((item) => {
+    item.addEventListener('click', function (event) {
+      let currentColor = document.querySelectorAll('.main-colors__item._active');
+      let currentColorImage = document.querySelectorAll('.main__image img._active');
+      const index = event.currentTarget.getAttribute('data-index');
+
+      if (currentColor[0]) currentColor[0].classList.remove('_active');
+      if (currentColorImage[0]) currentColorImage[0].classList.remove('_active');
+      if (colorsImages[index]) colorsImages[index].classList.add('_active');
+      event.currentTarget.classList.add('_active');
+    });
+  });
+  // END color switcher
+
+  // about accordion
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+  // END about accordion
+
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
   });
 });
