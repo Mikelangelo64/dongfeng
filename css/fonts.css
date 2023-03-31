@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: "DINNextW01-CondensedRegular";
-    src: url("/assets/fonts/DINNextLTPro-Condensed.otf");
+    src: url("./assets/fonts/DINNextLTPro-Condensed.otf");
     font-display: swap;
 }
 @font-face {
     font-family: "UnitedSansReg-Bold";
-    src: url("/assets/fonts/UnitedSansReg-Bold.otf");
+    src: url("./assets/fonts/UnitedSansReg-Bold.otf");
     font-display: swap;
 }
 @font-face {
     font-family: "UnitedSansReg-Heavy";
-    src: url("/assets/fonts/UnitedSansReg-Heavy.otf");
+    src: url("./assets/fonts/UnitedSansReg-Heavy.otf");
     font-display: swap;
 }
 
