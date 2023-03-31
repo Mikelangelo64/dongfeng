@@ -4827,6 +4827,7 @@ html:not(.v-mobile) .cabin-picture__action:hover .cabin-picture__label {
 }
 .stickysub-mob__menu {
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   width: 100%;
   top: 100%;
@@ -4837,6 +4838,7 @@ html:not(.v-mobile) .cabin-picture__action:hover .cabin-picture__label {
 }
 .stickysub-mob__menu._active {
   opacity: 0.9;
+  visibility: visible;
 }
 .stickysub-mob__menu li {
   font-family: "DINNextW01-CondensedRegular", sans-serif;

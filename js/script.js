@@ -340,30 +340,57 @@ document.addEventListener('DOMContentLoaded', function () {
   // END about accordion
 
   // Sticky Sub Header
-  // When the user scrolls the page, execute myFunction
-  window.onscroll = function () { myFunction() };
-
-  // Get the header
   var subHeader = document.getElementById("sub-header");
-
-  // Get the offset position of the navbar
-  var sticky = subHeader.offsetTop;
-
-  // Add the sticky class to the subHeader when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      subHeader.classList.add("sticky");
-    } else {
-      subHeader.classList.remove("sticky");
+  if (subHeader) {
+    window.onscroll = function () { myFunction() };
+    var sticky = subHeader.offsetTop;
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        subHeader.classList.add("sticky");
+      } else {
+        subHeader.classList.remove("sticky");
+      }
     }
   }
   // END Sticky Sub Header
 
+  // Sticky Sub Header Menu
   var mobMenuBtn = document.querySelectorAll('.stickysub-mob__label');
   var mobMobMenu = document.querySelectorAll('.stickysub-mob__menu');
-  mobMenuBtn[0].addEventListener("click", function () {
-    mobMobMenu[0].classList.toggle("_active");
-  });
+  if ( mobMenuBtn[0] ) {
+    mobMenuBtn[0].addEventListener("click", function () {
+      mobMobMenu[0].classList.toggle("_active");
+    });
+  }
+  // END Sticky Sub Header Menu
+
+
+  //close popups on menu link click
+  const menuLinks = document.querySelectorAll('.stickysub__menu__item');
+  if (menuLinks.length !== 0) {
+    menuLinks.forEach((link) => {
+      link.addEventListener('click', (evt) => {
+        evt.preventDefault();
+
+        const sectionClass = link.dataset.goto;
+        const section = document.querySelector(sectionClass);
+
+        if (!section) {
+          return;
+        }
+
+        if ( mobMenuBtn[0] ) {
+            mobMobMenu[0].classList.remove("_active");
+        }
+
+        window.scrollTo({
+          top: section.offsetTop,
+          behavior: 'smooth',
+        });
+      });
+    });
+  }
+
 
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
