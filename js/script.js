@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Sticky Sub Header Menu
   var mobMenuBtn = document.querySelectorAll('.stickysub-mob__label');
   var mobMobMenu = document.querySelectorAll('.stickysub-mob__menu');
-  if ( mobMenuBtn[0] ) {
+  if (mobMenuBtn[0]) {
     mobMenuBtn[0].addEventListener("click", function () {
       mobMobMenu[0].classList.toggle("_active");
     });
@@ -379,8 +379,8 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
         }
 
-        if ( mobMenuBtn[0] ) {
-            mobMobMenu[0].classList.remove("_active");
+        if (mobMenuBtn[0]) {
+          mobMobMenu[0].classList.remove("_active");
         }
 
         window.scrollTo({
@@ -395,4 +395,83 @@ document.addEventListener('DOMContentLoaded', function () {
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
   });
+
+  // replace iframe by image
+  var div, n,
+    v = document.getElementsByClassName("youtube-player");
+  for (n = 0; n < v.length; n++) {
+    div = document.createElement("div");
+    div.setAttribute("data-id", v[n].dataset.id);
+
+    if (v[n].classList.contains('no-click')) {											// for thumbnail
+      div.innerHTML = labnolThumb(v[n].dataset.id, 'mqdefault');
+    } else {  																			// for full image
+      div.innerHTML = labnolThumb(v[n].dataset.id, 'maxresdefault');
+      div.onclick = labnolIframe;
+    }
+
+    v[n].appendChild(div);
+  }
+
+  function labnolThumb(id, imgsize) {
+    var thumb = '<img src="https://i.ytimg.com/vi/ID/imgsize.jpg">',
+      play = '<div class="play"></div>';
+    return thumb.replace("ID", id).replace('imgsize', imgsize) + play;
+  }
+
+  function labnolIframe() {
+    var iframe = document.createElement("iframe");
+    var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+    iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "1");
+    this.parentNode.replaceChild(iframe, this);
+  }
+
+
+  // POPUP
+  // Вызов модального окна
+  $('.general__button, .banner__button, .details-main__button, .gallery__button, .test-drive__button, .about__button').click(function (e) {
+    e.preventDefault();
+    $('#callback-form').css("display", "flex").hide().fadeIn();
+    $('#callback-form input[name="block_name"]').val($(this).data('btn'));
+    //console.log($('#callback-form input[name="block_name"]').val());
+
+    document.querySelector('html').classList.add("_lock");
+    document.querySelector('body').classList.add("_lock");
+  });
+
+  // Вызов модального окна
+  $('.buying__button').click(function (e) {
+    e.preventDefault();
+    $('#calculate-form').css("display", "flex").hide().fadeIn();
+
+    $('#calculate-form input[name="block_name"]').val($(this).data('btn'));
+
+    document.querySelector('html').classList.add("_lock");
+    document.querySelector('body').classList.add("_lock");
+  });
+
+  // Закрытие окна на крестик
+  $('.close-overlay, .thans__btn').click(function (e) {
+    e.preventDefault();
+    $('.overlay').fadeOut();
+
+    document.querySelector('html').classList.remove("_lock");
+    document.querySelector('body').classList.remove("_lock");
+  });
+
+  //окон на клику на задник
+  const overlays = document.querySelectorAll('.overlay')
+  overlays.length !== 0 && (
+    overlays.forEach((overlay) => {
+      overlay.addEventListener("click", function (evt) {
+        if (evt.target === $(this).children('.overlay__scroll')[0]) {
+          $('.overlay').fadeOut();
+          document.querySelector('html').classList.remove("_lock");
+          document.querySelector('body').classList.remove("_lock");
+        }
+      })
+    })
+  )
 });
